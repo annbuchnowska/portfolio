@@ -6,6 +6,7 @@
   <title>Anna - portfolio</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
 
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <!-- Place favicon.ico in the root directory -->
@@ -35,8 +36,13 @@
     <section id="about" class="">
 
       <a class="sectionTitle smoothScroll" href="#about">about me</a>
-      <div class="sectionContent">
-        <p>Mauris interdum fringilla augue vitae tincidunt. Curabitur vitae tortor id eros euismod ultrices. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent nulla mi, rutrum ut feugiat at, vestibulum ut neque? Cras tincidunt enim vel aliquet facilisis. Duis congue ullamcorper vehicula. Proin nunc lacus, semper sit amet elit sit amet, aliquet pulvinar erat. Nunc pretium quis sapien eu rhoncus. Suspendisse ornare gravida mi, et placerat tellus tempor vitae.</p>
+      <div class="sectionContent aboutContent">
+        <h1>
+          <svg class="aboutFrame">
+            <rect x="0" y="0" fill="none" width="620" height="140"></rect>
+    			</svg>
+          Hi, my name is Anna <br>and I am a <strong>Front-end Developer</strong>
+        </h1>
       </div>
     </section>
 
@@ -46,8 +52,38 @@
     <section id="who" class="">
 
       <a  class="sectionTitle smoothScroll" href="#who">who am i</a>
-      <div class="sectionContent">
-        <p>Mauris interdum fringilla augue vitae tincidunt. Curabitur vitae tortor id eros euismod ultrices. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent nulla mi, rutrum ut feugiat at, vestibulum ut neque? Cras tincidunt enim vel aliquet facilisis. Duis congue ullamcorper vehicula. Proin nunc lacus, semper sit amet elit sit amet, aliquet pulvinar erat. Nunc pretium quis sapien eu rhoncus. Suspendisse ornare gravida mi, et placerat tellus tempor vitae.</p>
+      <div class="sectionContent whoContent">
+        <div class="whoItem">
+          <h3>Past</h3>
+          <p>
+            I believe that everything important in life comes in the right time and place.
+            I graduated computer science and the resultant of events blocked my continued development in this direction.
+            First, I got to know specifics of working with a client and then became involved to a few years of physics.
+            The passion for science, technology, searching for creative problem solutions caused that every encounter with my students was an extraordinary experience.
+            So... It is the right time for change...
+          </p>
+        </div>
+        <div class="whoItem">
+          <h3>Present</h3>
+          <p>
+            Actively learn, work, I develop, realize small orders. I use every spare moment to achieve the objective.
+          </p>
+          <div class="technologies">
+            <img src="images/logos/html5.png" class="tech-logo" alt="technology logo" title="html5 logo">
+            <img src="images/logos/css3.png" class="tech-logo" alt="technology logo" title="css3 logo">
+            <img src="images/logos/js.png" class="tech-logo" alt="technology logo" title="js logo">
+            <img src="images/logos/jquery.png" class="tech-logo" alt="technology logo" title="jquery logo">
+          </div>
+          <div class="technologies">
+            <img src="images/logos/bootstrap.png" class="tech-logo" alt="technology logo" title="bootstrap logo">
+            <img src="images/logos/sass.png" class="tech-logo" alt="technology logo" title="sass logo">
+            <img src="images/logos/gulp.png" class="tech-logo" alt="technology logo" title="gulp logo">
+            <img src="images/logos/wordpress.png" class="tech-logo" alt="technology logo" title="wordpress logo">
+          </div>
+          <div class="technologies">
+            <img src="images/logos/git.png" class="tech-logo" alt="technology logo" title="git logo">
+          </div>
+        </div>
       </div>
 
     </section>
@@ -55,7 +91,7 @@
     <!-- section - WHAT I DO -->
     <section id="what" class="">
 
-      <a class="sectionTitle smoothScroll" href="#what">what i do</a>
+      <a class="sectionTitle smoothScroll" data-iconpos="right" href="#what">what i do</a>
       <div class="sectionContent">
         <p>Mauris interdum fringilla augue vitae tincidunt. Curabitur vitae tortor id eros euismod ultrices. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent nulla mi, rutrum ut feugiat at, vestibulum ut neque? Cras tincidunt enim vel aliquet facilisis. Duis congue ullamcorper vehicula. Proin nunc lacus, semper sit amet elit sit amet, aliquet pulvinar erat. Nunc pretium quis sapien eu rhoncus. Suspendisse ornare gravida mi, et placerat tellus tempor vitae.</p>
       </div>
@@ -67,7 +103,37 @@
 
       <a class="sectionTitle smoothScroll" href="#contact">contact</a>
       <div class="sectionContent">
-        <p>Mauris interdum fringilla augue vitae tincidunt. Curabitur vitae tortor id eros euismod ultrices. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent nulla mi, rutrum ut feugiat at, vestibulum ut neque? Cras tincidunt enim vel aliquet facilisis. Duis congue ullamcorper vehicula. Proin nunc lacus, semper sit amet elit sit amet, aliquet pulvinar erat. Nunc pretium quis sapien eu rhoncus. Suspendisse ornare gravida mi, et placerat tellus tempor vitae.</p>
+        <form enctype="application/x-www-form-urlencoded;" id="contact-form" class="form-horizontal" role="form" method="post">
+           <div class="form-group" id="name-field">
+               <label for="form-name" class="col-lg-2 control-label">Name</label>
+               <div class="col-lg-10">
+                   <input type="text" class="form-control" id="form-name" name="form-name" placeholder="Name" required>
+               </div>
+           </div>
+           <div class="form-group" id="email-field">
+               <label for="form-email" class="col-lg-2 control-label">Email</label>
+               <div class="col-lg-10">
+                   <input type="email" class="form-control" id="form-email" name="form-email" placeholder="Email" required>
+               </div>
+           </div>
+           <div class="form-group" id="subject-field">
+               <label for="form-subject" class="col-lg-2 control-label">Subject</label>
+               <div class="col-lg-10">
+                   <input type="text" class="form-control" id="form-subject" name="form-subject" placeholder="Subject" required>
+               </div>
+           </div>
+           <div class="form-group" id="message-field">
+               <label for="form-message" class="col-lg-2 control-label">Message</label>
+               <div class="col-lg-10">
+                   <textarea class="form-control" rows="6" id="form-message" name="form-message" placeholder="Message" required></textarea>
+               </div>
+           </div>
+           <div class="form-group">
+               <div class="col-lg-offset-2 col-lg-10">
+                   <button type="submit" class="btn btn-default">Send</button>
+               </div>
+           </div>
+       </form>
       </div>
     </section>
 
@@ -98,6 +164,7 @@
   <script src="js/smoothScroll.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
+  <script src="js/contact-form.js"></script>
   <script src="js/main.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

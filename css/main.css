@@ -7,7 +7,7 @@
 /* ==========================================================================
 Base styles: opinionated defaults
 ========================================================================== */
-@import 'https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i&subset=latin-ext';
+@import 'https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,700,900&subset=latin-ext';
 html {
   color: #222;
   font-size: 1em;
@@ -97,7 +97,13 @@ h1, h2, h3 {
   margin: 0;
   font-size: 30px;
 }
-
+h1 {
+  font-weight: 100;
+}
+strong {
+  font-weight: 300;
+  font-style: italic;
+}
 p {
   color: #eee;
   font-size: 1em;;
@@ -115,6 +121,7 @@ a {
   padding-left: 10vw;
   width: auto;
   height: 20vh;
+  outline: 0;
 }
 a:active, a:hover {
   outline: 0;
@@ -143,18 +150,26 @@ section {
   padding-right: 100px;
 }
 .sectionContent {
-    height: 85vh;
-
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-/*section.show {
-position: absolute;
-top: 10vh;
-transition: all 1s linear;
-
+.ui-icon.iconUp {
+  background:url("../images/arrow-up.svg") no-repeat;
 }
-section.hide {
-  visibility: hidden;
-}*/
+.ui-icon.iconDown {
+  background:url("../images/arrow-down.svg") no-repeat;
+}
+.ui-icon.iconUp, .ui-icon.iconDown {
+  background-size:40px;
+  width: 40px;
+  height: 40px;
+  position: sticky;
+  left: 100%;
+  margin-left: -10vw;
+}
+
 
 /****************************************************************************************/
 #logo img{
@@ -170,12 +185,71 @@ section.hide {
   background: url("../images/about.jpg") no-repeat center;
   background-size: cover;
 }
+.aboutContent {
+  align-items: flex-end;
+  justify-content: center;
+}
+h1 {
+  position: relative;
+  font-size: 44px;
+  font-weight: 300;
+  display: block;
+  margin-bottom: 10vh;
+  text-align: center;
+}
+h1 strong {
+  color: #D4D4D4;
+}
+svg {
+  position: absolute;
+  height: 140px;
+  width: 620px;
+  right: -20px;
+}
+rect {
+  fill: none;
+  stroke: white;
+  stroke-width: 0;
+  stroke-dasharray: 1500;
+  animation: hborder 6s forwards;
+}
 
-
+@keyframes hborder {
+  0% {
+    stroke-dasharray: 400, 0;
+  }
+  50% {
+    stroke-dasharray: 100, 0;
+    stroke-width: 1;
+  }
+  100% {
+    stroke-dasharray: 0,900, 300, 3000;
+    stroke-width: 2;}
+}
 /* *********************************** */
 #who {
   background: url("../images/who.jpg") no-repeat center;
   background-size: cover;
+}
+.whoContent {
+  margin-top: 10vh;
+}
+.whoItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 45%;
+}
+.whoItem .technologies {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 1em;
+}
+.technologies .tech-logo {
+  width: 40px;
+  height: auto;
 }
 
 /* *********************************** */
@@ -189,29 +263,34 @@ section.hide {
   background: url("../images/contact.jpg") no-repeat center;
   background-size: cover;
 }
+
+
+
+
+
 @media only screen and (max-width: 768px) {
-    a {
-      padding-left: 0;
-    }
-    header, footer, section {
-      padding: 0 50px;
-    }
-    #about {
-      background: url("../images/about-mob.jpg") no-repeat center;
-      background-size: cover;
-    }
-    #who {
-      background: url("../images/who-mob.jpg") no-repeat center;
-      background-size: cover;
-    }
-    #what {
-      background: url("../images/what-mob.jpg") no-repeat center;
-      background-size: cover;
-    }
-    #contact {
-      background: url("../images/contact-mob.jpg") no-repeat center;
-      background-size: cover;
-    }
+  a {
+    padding-left: 0;
+  }
+  header, footer, section {
+    padding: 0 50px;
+  }
+  #about {
+    background: url("../images/about-mob.jpg") no-repeat center;
+    background-size: cover;
+  }
+  #who {
+    background: url("../images/who-mob.jpg") no-repeat center;
+    background-size: cover;
+  }
+  #what {
+    background: url("../images/what-mob.jpg") no-repeat center;
+    background-size: cover;
+  }
+  #contact {
+    background: url("../images/contact-mob.jpg") no-repeat center;
+    background-size: cover;
+  }
 }
 
 
