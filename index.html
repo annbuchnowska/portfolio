@@ -35,13 +35,13 @@
     <!-- main - ABOUT ME -->
     <section id="about" class="">
 
-      <a class="sectionTitle smoothScroll" href="#about">about me</a>
+      <a class="sectionTitle smoothScroll" href="#about"><h2>about me</h2></a>
       <div class="sectionContent aboutContent">
         <h1>
           <svg class="aboutFrame">
-            <rect x="0" y="0" fill="none" width="620" height="140"></rect>
+            <rect x="0" y="0" fill="none" width="750" height="140"></rect>
     			</svg>
-          Hi, my name is Anna <br>and I am a <strong>Front-end Developer</strong>
+          Hi, my name is Anna <br>and I am <br>a <strong>Front-end Developer</strong>
         </h1>
       </div>
     </section>
@@ -51,7 +51,7 @@
     <!-- section - WHO AM I -->
     <section id="who" class="">
 
-      <a  class="sectionTitle smoothScroll" href="#who">who am i</a>
+      <a  class="sectionTitle smoothScroll" href="#who"><h2>who am i</h2></a>
       <div class="sectionContent whoContent">
         <div class="whoItem">
           <h3>Past</h3>
@@ -91,9 +91,68 @@
     <!-- section - WHAT I DO -->
     <section id="what" class="">
 
-      <a class="sectionTitle smoothScroll" data-iconpos="right" href="#what">what i do</a>
+      <a class="sectionTitle smoothScroll" data-iconpos="right" href="#what"><h2>what i do</h2></a>
       <div class="sectionContent">
-        <p>Mauris interdum fringilla augue vitae tincidunt. Curabitur vitae tortor id eros euismod ultrices. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent nulla mi, rutrum ut feugiat at, vestibulum ut neque? Cras tincidunt enim vel aliquet facilisis. Duis congue ullamcorper vehicula. Proin nunc lacus, semper sit amet elit sit amet, aliquet pulvinar erat. Nunc pretium quis sapien eu rhoncus. Suspendisse ornare gravida mi, et placerat tellus tempor vitae.</p>
+        <!-- Flexslider Start-->
+        <div id="intro-slider" class="flexslider">
+          <ul class="slides">
+            <!-- Slide -->
+            <li>
+              <div  class="whatContent">
+                <h3>Front-end</h3>
+                <p>
+                  I create responsive websites for small businesses.
+                  I pay attention to detail and enhances the experience with modern technologies.
+                </p>
+                <div class="webpages">
+                  <a class="work ebudowlani" href="http://www.ebudowlani.com.pl" target="_blank"></a>
+                  <a class="work premium" href="http://www.premium.elk.pl" target="_blank"></a>
+                </div>
+              </div>
+            </li>
+            <!-- Slide -->
+            <li>
+              <div  class="whatContent">
+                <h3>Other...</h3>
+                <p>
+                  I exercise, read, learn, realize a small private tasks
+                </p>
+                <a class="github" href="https://github.com/cheri-x" target="_blank"></a>
+              </div>
+            </li>
+            <!-- Slide -->
+            <li>
+              <div  class="whatContent">
+                <h3>Science...</h3>
+                <p>
+                  As a teacher I teach creative problem solving and try to share the passion for Physic Science.
+                  I realize projects using elements of Scrum.
+                </p>
+              </div>
+            </li>
+            <!-- Slide -->
+            <li>
+              <div  class="whatContent">
+                <h3>Presently</h3>
+                <p>
+                  Analytic skills, love to science and experience in Physics, Mathematics and Computer Science lead me to further develop...
+                </p>
+                <div class="technologies">
+                  <img src="images/logos/python.png" class="tech-logo" alt="technology logo" title="python logo">
+                  <img src="images/logos/R.png" class="tech-logo" alt="technology logo" title="R logo">
+                  <img src="images/logos/hadoop.png" class="tech-logo" alt="technology logo" title="hadoop logo">
+                </div>
+                <p>
+                  by and by...
+                </p>
+              </div>
+            </li>
+            <!-- end slide -->
+          </ul>
+        </div>
+        <!-- Flexslider End-->
+
+
       </div>
 
     </section>
@@ -101,39 +160,26 @@
     <!-- section - CONTACT -->
     <section id="contact" class="">
 
-      <a class="sectionTitle smoothScroll" href="#contact">contact</a>
+      <a class="sectionTitle smoothScroll" href="#contact"><h2>contact</h2></a>
       <div class="sectionContent">
-        <form enctype="application/x-www-form-urlencoded;" id="contact-form" class="form-horizontal" role="form" method="post">
-           <div class="form-group" id="name-field">
-               <label for="form-name" class="col-lg-2 control-label">Name</label>
-               <div class="col-lg-10">
-                   <input type="text" class="form-control" id="form-name" name="form-name" placeholder="Name" required>
-               </div>
-           </div>
-           <div class="form-group" id="email-field">
-               <label for="form-email" class="col-lg-2 control-label">Email</label>
-               <div class="col-lg-10">
-                   <input type="email" class="form-control" id="form-email" name="form-email" placeholder="Email" required>
-               </div>
-           </div>
-           <div class="form-group" id="subject-field">
-               <label for="form-subject" class="col-lg-2 control-label">Subject</label>
-               <div class="col-lg-10">
-                   <input type="text" class="form-control" id="form-subject" name="form-subject" placeholder="Subject" required>
-               </div>
-           </div>
-           <div class="form-group" id="message-field">
-               <label for="form-message" class="col-lg-2 control-label">Message</label>
-               <div class="col-lg-10">
-                   <textarea class="form-control" rows="6" id="form-message" name="form-message" placeholder="Message" required></textarea>
-               </div>
-           </div>
-           <div class="form-group">
-               <div class="col-lg-offset-2 col-lg-10">
-                   <button type="submit" class="btn btn-default">Send</button>
-               </div>
-           </div>
-       </form>
+        <div id="form-messages"></div>
+        <form id="ajax-contact" method="post" action="mailer.php">
+    			<div class="field">
+    				<label for="name">Name:</label>
+    				<input type="text" id="name" name="name" required>
+    			</div>
+    			<div class="field">
+    				<label for="email">Email:</label>
+    				<input type="email" id="email" name="email" required>
+    			</div>
+    			<div class="field">
+    				<label for="message">Message:</label>
+    				<textarea id="message" name="message" required></textarea>
+    			</div>
+    			<div class="field">
+    				<button type="submit">Send</button>
+    			</div>
+    		</form>
       </div>
     </section>
 
@@ -145,7 +191,6 @@
   <footer>
     <p>code &amp; design by:</p>
     <p>Anna Buchnowska</p>
-
   </footer>
 
 
@@ -163,7 +208,7 @@
   <!-- smoothScroll -->
   <script src="js/smoothScroll.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
+  <script src="js/jquery.flexslider.js"></script>
   <script src="js/contact-form.js"></script>
   <script src="js/main.js"></script>
 
