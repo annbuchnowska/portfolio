@@ -211,6 +211,16 @@ section {
   margin-left: -10vw;
 }
 
+@media screen and (-webkit-min-device-pixel-ratio:0) {  /* safari/chrome */
+  a {
+    padding-left: 5vw;
+  }
+  .ui-icon.iconUp, .ui-icon.iconDown {
+    position: absolute;
+    margin-top: 9vh;
+  }
+}
+
 /****************************************************************************************/
 #logo img {
   height: 8vh;
